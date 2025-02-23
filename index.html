@@ -22,7 +22,7 @@
             padding: 10px 20px;
             color: white;
             cursor: pointer;
-            margin: 0 10px;
+            margin-left: 10px;
             font-size: 18px;
             text-shadow: none;
             transition: text-shadow 0.3s;
@@ -32,15 +32,22 @@
             background: none;
         }
         .content {
-            display: none;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            width: 50%;
+            left: 50%;
+            transform: translateX(-50%);
             padding: 20px;
             background: white;
-            margin: 20px auto;
-            width: 50%;
+            margin-top: 20px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
         }
         .active {
-            display: block;
+            opacity: 1;
+            visibility: visible;
+            position: relative;
         }
     </style>
 </head>
@@ -52,12 +59,12 @@
     
     <div id="home" class="content active">
         <h2>Home Page</h2>
-        <p>Contact me if you have problems except monaco problems discord:@fillbe__</p>
+        <p>Contact me if you have problems except problems with monaco Discord : @fillbe</p>
     </div>
     
     <div id="download" class="content">
-        <h2>Download API</h2>
-        <p>This API does not support monaco so please do not contact be about monaco problems Download:https://gofile.io/d/VM7xjD</p>
+        <h2>Download API/h2>
+        <p>Download : https://gofile.io/d/VM7xjD</p>
     </div>
 
     <script>
@@ -65,7 +72,11 @@
             document.querySelectorAll('.content').forEach(content => {
                 content.classList.remove('active');
             });
-            document.getElementById(tabId).classList.add('active');
+
+            let activeTab = document.getElementById(tabId);
+            setTimeout(() => {
+                activeTab.classList.add('active');
+            }, 10);
         }
     </script>
 </body>
