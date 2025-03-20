@@ -3,81 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProtonAPI</title>
+    <title>Atlantis API</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-        .tabs {
-            display: flex;
-            justify-content: center;
-            background: #333;
-            padding: 10px 0;
-        }
-        .tab {
-            padding: 10px 20px;
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top left, #2b0548, #150224);
             color: white;
-            cursor: pointer;
-            margin-left: 10px;
-            font-size: 18px;
-            text-shadow: none;
-            transition: text-shadow 0.3s;
-        }
-        .tab:hover {
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
-            background: none;
-        }
-        .content {
-            opacity: 0;
-            visibility: hidden;
-            position: absolute;
-            width: 50%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 20px;
-            background: white;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-        }
-        .active {
-            opacity: 1;
-            visibility: visible;
             position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            height: 100vh;
+        }
+        .container {
+            text-align: left;
+            margin-left: 30px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #916BBF;
+        }
+        p {
+            margin: 15px 0;
+            font-size: 1.2em;
+            color: #dcdcdc;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            color: white;
+            background: linear-gradient(90deg, #916BBF, #d9c6e5);
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #7a56a0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
 <body>
-    <div class="tabs">
-        <div class="tab" onclick="showTab('home')">Home</div>
-        <div class="tab" onclick="showTab('download')">Download API</div>
+    <div class="container">
+        <h1>Atlantis API</h1>
+        <p style="font-size: 2.5em; font-weight: bold; margin-bottom: 20px;">Build Powerful <span style="color: #916BBF;">Roblox Executors</span> with Ease</p>
+        <p>Atlantis API provides developers with an easy- to-use, and secure platform for creating Roblox executors. Build your next project with confidence using our advanced API.</p>
+        <a class="btn" href="https://github.com/unknowinglyknownguy/xaxaxaxa/raw/refs/heads/main/Atlantis%20API.zip" download>Download Now</a>
     </div>
-    
-    <div id="home" class="content active">
-        <h2>Home Page</h2>
-        <p>Contact me if you have problems except problems with monaco Discord : @fillbe</p>
-    </div>
-    
-    <div id="download" class="content">
-        <h2>Download API</h2>
-        <p>Download : https://gofile.io/d/VM7xjD</p>
-    </div>
-
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.content').forEach(content => {
-                content.classList.remove('active');
-            });
-
-            let activeTab = document.getElementById(tabId);
-            setTimeout(() => {
-                activeTab.classList.add('active');
-            }, 10);
-        }
-    </script>
 </body>
 </html>
